@@ -67,13 +67,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="requirements.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="requirements.aspx.cs">
+      <DependentUpon>requirements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="requirements.aspx.designer.cs">
+      <DependentUpon>requirements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rqdesk.Master.cs">
+      <DependentUpon>rqdesk.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rqdesk.Master.designer.cs">
+      <DependentUpon>rqdesk.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="rqdesk.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,16 @@
+.form-signin {
+	max-width:368px;
+	padding:15px;
+	margin: auto;
+		}
+
+.rq {
+    font-size: 1.5em;
+}
+
+.txtCarga {
+    color: limegreen;
+    font-size: 5em;
+    font-family: 'Poppins';
+    font-weight: 700;
+}
