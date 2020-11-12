@@ -21,33 +21,31 @@ namespace rqdesk_final
 
                 SqlDataReader dr = cmd.ExecuteReader();
 
-                Response.Write("<script type='text/javascript'>alert('Datos no Encontrados')</script>");
-
-                card.Append("<table border='1'>");
-                card.Append("<tr><th>Name</th><th>Description</th><th>Name</th><th>Description</th><th>Name</th><th>Description</th>");
-                card.Append("</tr>");
-
+                
                 if (dr.HasRows)
                 {
+                    card.Append("<div class='card-columns'>");
                     while (dr.Read())
                     {
-                        card.Append("<tr>");
-                        card.Append("<td>" + dr[0] + "</td>");
-                        card.Append("<td>" + dr[1] + "</td>");
-                        card.Append("<td>" + dr[2] + "</td>");
-                        card.Append("<td>" + dr[3] + "</td>");
-                        card.Append("<td>" + dr[4] + "</td>");
-                        card.Append("<td>" + dr[5] + "</td>");
-                        card.Append("</tr>");
+                        card.Append("<div class='card border-dark'>");
+                        card.Append("<div class='card-header'>" + dr[3] + "<button id=" + dr[0] + " type='button' class='btn btn-outline-secondary btn-sm open-modal-edit'>Editar</button></div>");
+                        card.Append("<div class='card-body'>");
+                        card.Append("<h5 class='card-title'>" + dr[1] + "</h5>");
+                        card.Append("<p class='card-text'>" + dr[2] + "</p>");
+                        card.Append("</div>");
+                        card.Append("<div class='card-footer'>");
+                        card.Append("<small class='text-muted'>" + dr[4] + "</small>");
+                        card.Append("<small class='text-muted'>" + dr[5] + "</small>");
+                        card.Append("</div></div>");
                     }
+                    card.Append("</div>");
                 }
 
                 else
                 {
-                    Response.Write("<script type='text/javascript'>alert('Datos no Encontrados')</script>");
+                    card.Append("<div class='alert alert-light alert-responsive' role='alert'>Ups! Parece que no hay requerimientos, puedes añadir uno <a href='#' class='alert-link'>aquí</a>.</div>");
                 }
 
-                card.Append("</table>");
                 PlaceHolder1.Controls.Add(new Literal { Text = card.ToString() });  
 
                 cn.Close();
