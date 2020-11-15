@@ -1736,6 +1736,7 @@
     <Content Include="css\requirements.css" />
     <Content Include="css\styles.css" />
     <Content Include="Editar_Registros.aspx" />
+    <Content Include="Historico_Usuarios.aspx" />
     <Content Include="img\login.jpg" />
     <Content Include="img\logo-light.png" />
     <Content Include="js\bootstrap.bundle.js" />
@@ -1762,7 +1763,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="consulta.cs" />
     <Compile Include="Editar.cs" />
     <Compile Include="Editar_Registros.aspx.cs">
       <DependentUpon>Editar_Registros.aspx</DependentUpon>
@@ -1772,6 +1772,13 @@
       <DependentUpon>Editar_Registros.aspx</DependentUpon>
     </Compile>
     <Compile Include="Encriptar.cs" />
+    <Compile Include="Historico_Usuarios.aspx.cs">
+      <DependentUpon>Historico_Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Historico_Usuarios.aspx.designer.cs">
+      <DependentUpon>Historico_Usuarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

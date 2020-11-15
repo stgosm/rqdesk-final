@@ -9,7 +9,7 @@ namespace rqdesk_final
 {
 	public partial class usuhis : System.Web.UI.Page
 	{
-        consulta consul = new consulta();
+        /*consulta consul = new consulta();
         protected void Page_Load(object sender, EventArgs e)
         {
             rptrqdesk.DataSource = consul.getusuario;
@@ -21,7 +21,7 @@ namespace rqdesk_final
             Editar ed = new Editar();
             ed.Buscar();
 
-        }
+        }*/
 
     }
 }
