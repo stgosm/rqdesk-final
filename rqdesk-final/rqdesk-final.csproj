@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -43,7 +44,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -1724,6 +1735,7 @@
     <Content Include="css\icons\webfonts\fa-solid-900.svg" />
     <Content Include="css\requirements.css" />
     <Content Include="css\styles.css" />
+    <Content Include="Editar_Registros.aspx" />
     <Content Include="img\login.jpg" />
     <Content Include="img\logo-light.png" />
     <Content Include="js\bootstrap.bundle.js" />
@@ -1733,11 +1745,48 @@
     <Content Include="js\jquery-3.3.1.min.js" />
     <Content Include="js\main.js" />
     <Content Include="js\popper.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Registro_Usuarios.aspx" />
     <Content Include="requirements.aspx" />
+    <Content Include="rqdesk1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>rqdesk1.edmx</DependentUpon>
+      <LastGenOutput>rqdesk1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="rqdesk1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>rqdesk1.edmx</DependentUpon>
+      <LastGenOutput>rqdesk1.cs</LastGenOutput>
+    </Content>
+    <Content Include="usuhis.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="consulta.cs" />
+    <Compile Include="Editar.cs" />
+    <Compile Include="Editar_Registros.aspx.cs">
+      <DependentUpon>Editar_Registros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editar_Registros.aspx.designer.cs">
+      <DependentUpon>Editar_Registros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Encriptar.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro_Usuarios.aspx.cs">
+      <DependentUpon>Registro_Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro_Usuarios.aspx.designer.cs">
+      <DependentUpon>Registro_Usuarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="requirements.aspx.cs">
       <DependentUpon>requirements.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1751,6 +1800,32 @@
     </Compile>
     <Compile Include="rqdesk.Master.designer.cs">
       <DependentUpon>rqdesk.Master</DependentUpon>
+    </Compile>
+    <Compile Include="rqdesk1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rqdesk1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rqdesk1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rqdesk1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rqdesk1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rqdesk1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_usuario.cs" />
+    <Compile Include="usuario.cs">
+      <DependentUpon>rqdesk1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuhis.aspx.cs">
+      <DependentUpon>usuhis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usuhis.aspx.designer.cs">
+      <DependentUpon>usuhis.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -1820,12 +1895,22 @@
     <Content Include="js\bootstrap.min.js.map" />
     <None Include="packages.config" />
     <Content Include="rqdesk.Master" />
+    <EntityDeploy Include="rqdesk1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>rqdesk1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="rqdesk1.edmx.diagram">
+      <DependentUpon>rqdesk1.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
