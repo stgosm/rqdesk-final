@@ -13,7 +13,7 @@
     <link href="css/requirements.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	
     <title>Dashboard</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -89,5 +89,10 @@
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>
+	
+	<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+	<script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.js"></script> 
+	
 </body>
 </html>

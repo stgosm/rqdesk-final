@@ -36,3 +36,8 @@ function btnEditar_Click() {
 function btnEditar_Click(){
 	alert("Prueba")
 }
+
+
+$(document).ready(function () {
+	$('#exa').DataTable();
+});
