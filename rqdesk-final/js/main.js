@@ -28,6 +28,10 @@ $('#modalRQ').on('show.bs.modal', function (event) {
 	modal.find('.modal-body input').val(recipient)
 })
 
+function btnEditar_Click() {
+	//document.getElementById("ContentPlaceHolder1_HiddenValueEditar").value = "Tajuddin";
+	console.log("Prueba");
+}
 
 function btnEditar_Click(){
 	alert("Prueba")
