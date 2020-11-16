@@ -31,7 +31,7 @@ namespace rqdesk_final
                     while (dr.Read())
                     {
                         tabla.Append("<tr>");
-                        tabla.Append("< td id ='usuario' runat ='server'>"+dr[1]+"</ td >");
+                        tabla.Append("<td id ='usuario' runat ='server'>"+dr[1]+"</td>");
                         tabla.Append("</tr>");
                     }
                
