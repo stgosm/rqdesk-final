@@ -32,3 +32,8 @@ $('#modalRQ').on('show.bs.modal', function (event) {
 function btnEditar_Click(){
 	alert("Prueba")
 }
+
+
+$(document).ready(function () {
+	$('#exa').DataTable();
+});

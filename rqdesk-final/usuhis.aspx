@@ -33,38 +33,7 @@
 <body>
     <form id="form1" runat="server">
 		<div class="container">
-		<table id="exa" class="display responsive" style="width:100%" >
-        <thead>
-            <tr>
-				<th>Usuario</th>
-                <th>Usuario</th>
-                <th>Contraseña</th>
-                <th>Privilegio</th>
-				<th>Privilegio</th>
-				<th>Privilegio</th>
-
-
-			
-            </tr>
-        </thead>
-        <tbody>
-		<asp:Repeater runat="server" ID="rptrqdesk" ItemType="rqdesk_final.usuario">
-			<ItemTemplate>
-				<td id="tdmagico"><asp:HiddenField ID="editarcamp" Value="<%# Item.id %>" runat="server" /></td>
-				<td><%# Item.usuario1  %></td>
-				<td><%# Item.contrasena  %></td>
-				<td><%# Item.privilegio %></td>
-				<td><asp:Button ID="btnEditar" runat="server" type="button" class="btn btn-lg btn-primary btn-block" value="<%# Item.id %>" Text="Editar" style="background-color:limegreen" OnClick="btnEditar_Click"></asp:Button></td>
-				<td><i class="fas fa-trash-alt"></i></td>
-				
-			</ItemTemplate>
-
-		</asp:Repeater>
-
-
-
-			</tbody>
-			</table>
+		
 			
 			</div>
     </form>

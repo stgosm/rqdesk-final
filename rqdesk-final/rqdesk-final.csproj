@@ -1736,6 +1736,7 @@
     <Content Include="css\requirements.css" />
     <Content Include="css\styles.css" />
     <Content Include="Editar_Registros.aspx" />
+    <Content Include="Historial_Usuarios.aspx" />
     <Content Include="Historico_Usuarios.aspx" />
     <Content Include="img\login.jpg" />
     <Content Include="img\logo-light.png" />
@@ -1762,6 +1763,13 @@
       <DependentUpon>Editar_Registros.aspx</DependentUpon>
     </Compile>
     <Compile Include="Encriptar.cs" />
+    <Compile Include="Historial_Usuarios.aspx.cs">
+      <DependentUpon>Historial_Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Historial_Usuarios.aspx.designer.cs">
+      <DependentUpon>Historial_Usuarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Historico_Usuarios.aspx.cs">
       <DependentUpon>Historico_Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
