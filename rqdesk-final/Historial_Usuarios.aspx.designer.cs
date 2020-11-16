@@ -13,30 +13,12 @@ namespace rqdesk_final {
     public partial class Historial_Usuarios {
         
         /// <summary>
-        /// Control usuario.
+        /// Control PlaceHolder1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableCell usuario;
-        
-        /// <summary>
-        /// Control contraseña.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableCell contraseña;
-        
-        /// <summary>
-        /// Control privilegio.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableCell privilegio;
+        protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolder1;
     }
 }

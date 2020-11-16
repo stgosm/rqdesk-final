@@ -8,18 +8,16 @@
         <thead>
             <tr>
                 <th>Usuario</th>
-                <th>Contraseña</th>
-                <th>Privilegio</th>
+                
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td id="usuario" runat="server"></td>
-                <td id="contraseña" runat="server">System Architect</td>
-                <td id="privilegio" runat="server">Edinburgh</td>
-          
-            </tr>
-                </table>
+			<asp:PlaceHolder ID="PlaceHolder1" runat="server">
+
+			</asp:PlaceHolder>
+        </tbody>
+            
+        </table>
 			
 			</div>
     
