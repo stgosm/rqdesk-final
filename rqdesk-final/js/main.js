@@ -33,11 +33,6 @@ function btnEditar_Click() {
 	console.log("Prueba");
 }
 
-function btnEditar_Click(){
-	alert("Prueba")
-}
-
-
 $(document).ready(function () {
 	$('#exa').DataTable();
 });
