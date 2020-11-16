@@ -13,7 +13,6 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Recipient:</label>
                 <input type="text" class="form-control" id="recipient-name">
@@ -22,7 +21,6 @@
                 <label for="message-text" class="col-form-label">Message:</label>
                 <textarea class="form-control" id="message-text"></textarea>
               </div>
-            </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -31,9 +29,5 @@
         </div>
       </div>
     </div>
-
-    <asp:Button ID="Prueba" runat="server" Text="Prueba" OnClick="btnEditar_Click" />
-    <asp:LinkButton ID="Prueba02" runat="server" OnClick='btnEditar_Click' CssClass='btn btn-outline-secondary btn-sm open-modal-edit' data-toggle='modal' type='button' data-target='#modalRQ'>LinkButton</asp:LinkButton>
-    <asp:Button ID='Button1' Text='Editar' runat='server' OnClick='btnEditar_Click' class='btn btn-outline-secondary btn-sm open-modal-edit' data-toggle='modal' type='button' data-target='#modalRQ' />
-    <asp:Button ID="Button2" Text="Open Web site" onclientclick="Navigate()" runat="server" onclick="btnEditar_Click" />
+    <asp:HiddenField ID="HiddenValueEditar" runat="server" Value="0"/>
 </asp:Content>
