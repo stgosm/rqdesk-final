@@ -28,9 +28,13 @@ $('#modalRQ').on('show.bs.modal', function (event) {
 	modal.find('.modal-body input').val(recipient)
 })
 
-function btnEditar_Click() {
+function btnEditar_Click(btn) {
 	//document.getElementById("ContentPlaceHolder1_HiddenValueEditar").value = "Tajuddin";
-	console.log("Prueba");
+	console.log(btn.id);
+	var str = document.getElementById("ContentPlaceHolder1_HiddenValueEditar");
+	str.value = btn.id;
+	console.log(str.value);
+	window.location.reload();
 }
 
 $(document).ready(function () {
