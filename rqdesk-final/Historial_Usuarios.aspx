@@ -8,6 +8,8 @@
         <thead>
             <tr>
                 <th>Usuario</th>
+		
+				<th>Privilegio</th>
                 
             </tr>
         </thead>

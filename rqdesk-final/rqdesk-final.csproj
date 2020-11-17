@@ -1750,7 +1750,6 @@
     <Content Include="Login.aspx" />
     <Content Include="Registro_Usuarios.aspx" />
     <Content Include="requirements.aspx" />
-    <Content Include="usuhis.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1807,13 +1806,6 @@
       <DependentUpon>rqdesk.Master</DependentUpon>
     </Compile>
     <Compile Include="SQL_usuario.cs" />
-    <Compile Include="usuhis.aspx.cs">
-      <DependentUpon>usuhis.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="usuhis.aspx.designer.cs">
-      <DependentUpon>usuhis.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\bootstrap-grid.css.map" />

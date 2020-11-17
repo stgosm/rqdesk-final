@@ -32,6 +32,8 @@ namespace rqdesk_final
                     {
                         tabla.Append("<tr>");
                         tabla.Append("<td id ='usuario' runat ='server'>"+dr[1]+"</td>");
+                    
+                        tabla.Append("<td id ='usuario' runat ='server'>" + dr[3] + "</td>");
                         tabla.Append("</tr>");
                     }
                
