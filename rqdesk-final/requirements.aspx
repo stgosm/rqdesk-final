@@ -26,16 +26,14 @@
                         <textarea class="form-control" id="message-text"></textarea>
                       </div>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send message</button>
-                  </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send message</button>
+                    </div>
+                    <asp:HiddenField ID="HiddenValueEditar" runat="server" Value="0" OnValueChanged="btnEditar_Click"/>
                 </div>
               </div>
             </div>
-            <asp:HiddenField ID="HiddenValueEditar" runat="server" Value=""/>
-            <asp:Button ID="Btn" runat="server" Text="Button" OnClick="btnEditar_Click"/>  
-            <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
         </ContentTemplate>
     </asp:UpdatePanel>
 </asp:Content>

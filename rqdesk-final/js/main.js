@@ -18,7 +18,7 @@
 
 })(jQuery);
 
-$('#modalRQ').on('show.bs.modal', function (event) {
+/*$('#modalRQ').on('show.bs.modal', function (event) {
 	var button = $(event.relatedTarget) // Button that triggered the modal
 	var recipient = button.data('whatever') // Extract info from data-* attributes
 	// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
@@ -26,15 +26,13 @@ $('#modalRQ').on('show.bs.modal', function (event) {
 	var modal = $(this)
 	modal.find('.modal-title').text('New message to ' + recipient)
 	modal.find('.modal-body input').val(recipient)
-})
+})*/
 
 function btnEditar_Click(btn) {
 	//document.getElementById("ContentPlaceHolder1_HiddenValueEditar").value = "Tajuddin";
-	console.log(btn.id);
 	var str = document.getElementById("ContentPlaceHolder1_HiddenValueEditar");
 	str.value = btn.id;
 	console.log(str.value);
-	window.location.reload();
 }
 
 $(document).ready(function () {
