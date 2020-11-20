@@ -10,27 +10,31 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                      <div>
+                          <h5><asp:Label ID="lblName" runat="server" Text=""></asp:Label></h5>
+                          <asp:Label ID="lblDate" runat="server" Text="" CssClass="text-monospace text-muted"></asp:Label>
+                      </div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
                       <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Recipient:</label>
-                        <input type="text" class="form-control" id="recipient-name">
-                        <asp:TextBox ID="txtRqName" CssClass="form-control" runat="server"></asp:TextBox>
+                        <label for="message-text" class="col-form-label">Descripción:</label>
+                        <asp:TextBox id="txtDescription" class="form-control" mode="multiline" runat="server"></asp:TextBox>
                       </div>
                       <div class="form-group">
-                        <label for="message-text" class="col-form-label">Message:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
+                        <label for="recipient-name" class="col-form-label">Área:</label>
+                        <asp:TextBox ID="txtArea" CssClass="form-control" runat="server"></asp:TextBox>
+                      </div>
+                      <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Estatus:</label>
+                        <asp:TextBox ID="txtStatus" CssClass="form-control" runat="server"></asp:TextBox>
                       </div>
                   </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Send message</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar RQ</button>
                     </div>
-                    <asp:HiddenField ID="HiddenValueEditar" runat="server" Value="0" OnValueChanged="btnEditar_Click"/>
                 </div>
               </div>
             </div>

@@ -28,11 +28,21 @@
 	modal.find('.modal-body input').val(recipient)
 })*/
 
-function btnEditar_Click(btn) {
+/*function btnEditar_Click(btn) {
 	//document.getElementById("ContentPlaceHolder1_HiddenValueEditar").value = "Tajuddin";
 	var str = document.getElementById("ContentPlaceHolder1_HiddenValueEditar");
 	str.value = btn.id;
 	console.log(str.value);
+}*/
+
+function SaveWithParameter(parameter, btn) {
+	__doPostBack(btn.id, parameter);
+	console.log('Id ' + btn.id);
+	console.log('Parameter ' + parameter);
+}
+
+function openModal() {
+	$('#modalRQ').modal({ show: true });
 }
 
 $(document).ready(function () {

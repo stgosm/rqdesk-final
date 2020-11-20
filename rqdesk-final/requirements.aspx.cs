@@ -25,7 +25,7 @@ namespace rqdesk_final
                     while (dr.Read())
                     {
                         card.Append("<div class='card border-dark'>");
-                        card.Append("<div class='card-header'>" + dr[3] + "<button id=" + dr[0] + " type='submit' name='ctl00$ContentPlaceHolder1$Button1' onclick='btnEditar_Click(this)' runat='server' class='btn btn-outline-secondary btn-sm open-modal-edit' data-toggle='modal' data-target='#modalRQ'>Editar</button></div>");
+                        card.Append("<div class='card-header'>" + dr[3] + "<button id=" + dr[0] + " name='ctl00$ContentPlaceHolder1$Button1' type='button' onclick='SaveWithParameter(" + dr[0] + ", this)' runat='server' class='btn btn-outline-secondary btn-sm open-modal-edit'>Editar</button></div>");
                         card.Append("<div class='card-body'>");
                         card.Append("<h5 class='card-title'>" + dr[1] + "</h5>");
                         card.Append("<p class='card-text'>" + dr[2] + "</p>");
@@ -46,30 +46,34 @@ namespace rqdesk_final
 
 
             }
+
+            string parameter = Request["__EVENTARGUMENT"];
+            string target = Request["__EVENTTARGET"];
+            btnEditar_Click(parameter);
         }
 
-        protected void btnEditar_Click(object sender, EventArgs e)
+        protected void btnEditar_Click(string parameter)
         {
             //ScriptManager.RegisterStartupScript(this, GetType(), "Javascript", "javascript:btnEditar_Click(this);", true);
-            string res = HiddenValueEditar.Value;
+            //string res = HiddenValueEditar.Value; res.ToString()
             using (SqlConnection cn = new SqlConnection("Data Source=DESKTOP-HN31V00;Initial Catalog = rqdesk;Trusted_Connection=true;"))
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM requirements WHERE rqId= '" + res.ToString() + "'", cn);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM requirements WHERE rqId='" + parameter + "'", cn);
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    txtRqName.Text = dr.GetValue(1).ToString();
+                    lblName.Text = dr.GetValue(1).ToString();
+                    txtDescription.Text = dr.GetValue(2).ToString();
+                    txtArea.Text = dr.GetValue(3).ToString();
+                    txtStatus.Text = dr.GetValue(4).ToString();
+                    lblDate.Text = dr.GetValue(5).ToString();
                 }
                 cn.Close();
             };
-            
+            ScriptManager.RegisterStartupScript(UpdatePanel1, typeof(UpdatePanel), "key", "openModal();", true);
+
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            string res = HiddenValueEditar.Value;
-            txtRqName.Text = res;
-        }
     }
 }
