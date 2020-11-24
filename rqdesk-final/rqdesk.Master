@@ -26,26 +26,20 @@
                     <div class="d-flex justify-content-center">
                         <img src="img/logo-light.png" width="120" class="d-flex align-items-stretch" alt="" loading="lazy" />
                     </div>
-	                <ul class="list-unstyled components pt-5 mb-5">
-	                  <!--<li class="active">
-	                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-	                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-	                    </ul>
-	                  </li>-->
+	                <ul class="list-unstyled components pt-5 mb-5" id="menuLeft">
 	                  <li>
                         <a id="tabHome" class="nav-link" runat="server" href="/home.aspx">Inicio</a>
 	                  </li>
-	                  <li>
-                        <a id="tabRequirements" class="nav-link" runat="server" href="/requirements.aspx">Requerimientos</a>
+                      <li>
+	                        <a id="tabRequirements"  class="nav-link" href="#submenuRequirements" runat="server" data-toggle="collapse">Requerimientos</a>
+	                        <ul class="collapse list-unstyled" id="submenuRequirements">
+                                <li>
+                                    <a href="/requirements.aspx">Mostrar</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="modal" data-target="#newModalRQ">Añadir nuevo</a>
+                                </li>
+	                        </ul>
 	                  </li>
 	                </ul>
 	          </div>

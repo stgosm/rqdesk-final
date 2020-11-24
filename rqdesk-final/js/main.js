@@ -45,6 +45,13 @@ function openModal() {
 	$('#modalRQ').modal({ show: true });
 }
 
+function closeModalNewRequirement() {
+	$('#newModalRQ').modal({ show: false });
+	$('#newModalRQ').modal('hide');
+	$('#modalRQ').modal({ show: false });
+	$('#modalRQ').modal('hide');
+}
+
 $(document).ready(function () {
 	$('#exa').DataTable();
 });
