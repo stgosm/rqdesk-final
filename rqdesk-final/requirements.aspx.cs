@@ -50,7 +50,7 @@ namespace rqdesk_final
 
             string parameter = Request["__EVENTARGUMENT"];
             string target = Request["__EVENTTARGET"];
-            //btnEditar_Click(parameter);
+            btnEditar_Click(parameter);
         }
 
         protected void btnEditar_Click(string parameter)
