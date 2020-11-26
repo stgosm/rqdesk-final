@@ -51,6 +51,15 @@ namespace rqdesk_final
         protected global::System.Web.UI.HtmlControls.HtmlAnchor tabRequirements;
 
         /// <summary>
+        /// Control btnObtenerJson.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnObtenerJson;
+
+        /// <summary>
         /// Control tabHome02.
         /// </summary>
         /// <remarks>

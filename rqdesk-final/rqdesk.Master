@@ -31,13 +31,16 @@
                         <a id="tabHome" class="nav-link" runat="server" href="/home.aspx">Inicio</a>
 	                  </li>
                       <li>
-	                        <a id="tabRequirements"  class="nav-link" href="#submenuRequirements" runat="server" data-toggle="collapse">Requerimientos</a>
+	                    <a id="tabRequirements"  class="nav-link" href="#submenuRequirements" runat="server" data-toggle="collapse">Requerimientos</a>
 	                        <ul class="collapse list-unstyled" id="submenuRequirements">
                                 <li>
                                     <a href="/requirements.aspx">Mostrar</a>
                                 </li>
                                 <li>
                                     <a href="#" data-toggle="modal" data-target="#newModalRQ">Añadir nuevo</a>
+                                </li>
+                                <li>
+                                    <asp:LinkButton ID="btnObtenerJson" runat="server" OnClick="btnObtenerJson_Click" OnClientClick="obtenerJson()">Obtener en Json</asp:LinkButton>
                                 </li>
 	                        </ul>
 	                  </li>
